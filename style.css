@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+  body {
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+    /* overflow-x:hi; */
+    font-family: "Poppins";
+  }
+
+  .navbar {
+    background-color: black;
+    width: 100%;
+    font-size: larger;
+    box-shadow: -2px 2px 5px cyan;
+    /* position:fixed;
+  z-index: -1; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar h1 {
+    margin: 15px;
+    animation-name: color;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+      animation-delay: 1s;
+      animation-iteration-count: infinite;
+    
+  }
+  @keyframes color {
+    from{
+      color: whitesmoke;
+    }
+    to{
+      color: cyan;
+      text-shadow: 1px 1px 2px cyan;
+    }
+    
+  }
+
+  .elements {
+    padding: 20px;
+
+  }
+
+  .elements a {
+    padding: 2px;
+    text-decoration: none;
+    margin: 20px;
+    color: white;
+    transition-property: width;
+    transition-duration: 5s;
+    transition-timing-function: ease-out;
+    transition-delay: 1ms;
+  }
+
+  .elements a:hover {
+    box-shadow: -2px 2px 15px 1px cyan ;
+    /* color: cyan; */
+    border-radius: 5px;
+    width: 500px;
+  }
+
+  .Grids {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 600px;
+    box-shadow: -2px 2px 5px cyan;
+  }
+
+  .Grids div {
+    place-self: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    /* padding-left:100px; */
+
+
+  }
+
+  .Grids img {
+    height: 400px;
+    width: 400px;
+    background-position: top;
+    place-self: center;
+    border-radius: 50px 10px;
+    /* border: 3px solid cyan; */
+    box-shadow: 0px 0px 15px cyan, 0px 0px 15px cyan inset;
+    animation-name: box-shadow;
+    animation-duration:  1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes box-shadow {
+    0%{
+      box-shadow: 2px 2px 15px 5px cyan;
+    }
+    50%{
+      box-shadow: 2px 2px 15px 5px white;
+    }
+    100%{
+      box-shadow: 2px 2px 15px 5px cyan;
+    }
+  }
+
+  .name {
+    font-size: 90px;
+    font-weight: 900;
+    align-self: center;
+    word-spacing: 5px;
+  }
+
+
+  .Grids button {
+    width: 100px;
+    height: 50px;
+    font-weight: 800;
+    font-size: large;
+    background-color: cyan;
+    color: rgba(0, 0, 0, 0.694);
+    border-radius: 15px;
+    transform: rotate(10deg);
+    transition-duration: 1ms;
+    transition-property: all;
+    transition-timing-function: ease-out;
+    transition-delay: 1ms;
+    text-align: center;
+  }
+
+  .Grids button:hover {
+    transform: rotate(0deg);
+    color: black;
+    box-shadow: -2px 2px 5px 2px whitesmoke;
+
+  }
+
+  .about {
+    display: grid;
+    grid-template-rows: 100px 500px;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.185);
+  }
+
+  .about h1 {
+    color: whitesmoke;
+    justify-self: center;
+    align-self: center;
+  }
+
+  .about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gif {
+    place-self: center;
+
+  }
+
+  .about p {
+    place-self: center;
+    margin-left: 5px;
+  }
+
+  .intro {
+    display: grid;
+    grid-template-rows: 100px 200px;
+  }
+
+  .intro h1 {
+    color: cyan;
+    font-size: larger;
+    place-self: flex-end;
+    animation-name: changeText;
+    animation-delay:1s;
+    animation-duration:2s;
+    animation-timing-function: linear;
+  }
+  .intro h1::after {
+    content: "Hello";
+   animation-name: changeText;
+   animation-timing-function: linear;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+  }
+  
+  @keyframes changeText {
+    0%   { content: "Hola"; }
+    33%  { content: "Bonjour"; }
+    66%  { content: "नमस्ते (Namaste)"; }
+    100% { content: "こんにちは (Konnichiwa)"; }
+  }
+
+
+  .intro p {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+    place-self: center;
+  }
+
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    /* gap: 20px; */
+    box-shadow: -2px 2px 5px cyan;
+
+  }
+
+  .projects h1 {
+    place-self: center;
+  }
+
+  .PElements {
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .PElements a{
+    text-decoration: none;
+    color: wheat;
+
+  }
+
+  .pele {
+    width: 400px;
+    height: 380px;
+    margin: 25px;
+    box-shadow: -2px 2px 5px 8px cyan;
+   animation-name: box;
+   animation-duration: 2s;
+   animation-delay: 1s;
+   animation-iteration-count: infinite;
+  }
+  @keyframes box {
+    0%{
+      box-shadow: 2px 2px 5px 4px cyan;
+    }
+    50%{
+      box-shadow: 2px 2px 5px 4px white;
+    }
+    100%{
+      box-shadow: 2px 2px 5px 4px cyan;
+    }
+  }
+
+  .p2 video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .p1 video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .p3 video {
+    width: 100%;
+    height: 100%;
+  }
+
+  .skills {
+    display: grid;
+    height: 500px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 1fr;
+    gap: 20px;
+    box-shadow: -2px 2px 5px cyan;
+  }
+
+  .skills h1 {
+    place-self: center;
+    margin-top: 25px;
+    color: whitesmoke;
+    grid-column: span 2;
+  }
+
+  .skillsGrid1 {
+    height: 400px;
+    place-self: center;
+    display: grid;
+    gap: 20px;
+    grid-column: span 2;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+  }
+
+  .skillsbox {
+    place-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: cyan;
+    padding: 10px;
+    width: 100px;
+    box-shadow: 5px 5px 10px;
+    border-radius: 20px;
+    height: 50px;
+    /* background-color: cyan; */
+    animation-name: example;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes example {
+  from { box-shadow:  -3px 2px 4px white; }
+  to { box-shadow:  -3px 2px 4px  black; }
+}
+
+.contact{
+  display: grid;
+   letter-spacing: 2px;
+   word-spacing: 5px;
+  grid-template-rows: 100px 1fr;
+  gap: 20px;
+  width: 100%;
+  height: 600px;
+  border-bottom: 2px solid cyan;
+}
+.contact>h1{
+place-self: center;
+}
+.talk{
+  /* align-self: center; */
+  margin-left: 100px;
+  display: grid;
+  gap: 40px;
+}
+.info{
+  align-self: center;
+  margin-left: 200px;
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr ;
+}
+.form{
+  place-self: center;
+}
+.formMain{
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+}
+.fromIn{
+  place-items: center;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  background-color: black;
+color: cyan;
+
+}
+.footer{
+  margin-left: 25px;
+  margin-top: 5px;
+  display: flex;
+  justify-content:space-between;
+}
+.footer img{
+width: 10px;
+height: 10px;
+margin: 5px;
+}
+.footer h1{
+  color: cyan;
+  font-size: smaller;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-right: 40px;
+
+}
